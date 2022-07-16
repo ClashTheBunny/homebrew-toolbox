@@ -17,6 +17,8 @@ class Jj < Formula
   end
 
   test do
-    assert_equal "jujutsu #{version}\n", shell_output("#{bin}/jj --version")
+    system bin/"jj", "init", "--git"
+
+    assert_predicate testpath/".jj", :exist?
   end
 end
