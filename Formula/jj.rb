@@ -17,7 +17,6 @@ class Jj < Formula
   end
 
   test do
-    ENV["STARSHIP_CONFIG"] = ""
     assert_equal "jujutsu #{version}\n", shell_output("#{bin}/jj --version")
   end
 end
